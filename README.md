@@ -6,6 +6,8 @@ VCLは、理科実験を体験的に学べるWebアプリケーションです�
 
 そこで、実際の薬品を使わなくても、注ぐ、混ぜる、反応を見るという流れをWeb上で体験できるアプリとしてVCLを制作しました。
 
+![VCL overview](assets/vcl-cover.png)
+
 ## Overview
 
 - 対象: 小学校高学年から中学生
@@ -42,6 +44,12 @@ VCLは、理科実験を体験的に学べるWebアプリケーションです�
 実験操作を自然に入力する方法として、画像認識、QRコード検出、RGBによる色検出、マイコンとジャイロセンサーなども検討しました。しかし、画像認識系は照明や背景の影響を受けやすく、マイコン案もセンサー値の安定性に課題がありました。
 
 最終的に、傾ける、振るといった操作を比較的安定して取得しやすく、実験器具を扱っている感覚も出しやすいJoy-Conを採用しました。
+
+## Screenshots
+
+![VCL experiment experience UI](assets/vcl-experience-ui.png)
+
+![VCL experiment library](assets/vcl-experiment-library.png)
 
 ## Architecture
 
