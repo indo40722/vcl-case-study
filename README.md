@@ -1,4 +1,4 @@
-# VCL Case Study
+# VCL 制作事例
 
 VCLは、理科実験を体験的に学べるWebアプリケーションです。
 
@@ -6,9 +6,9 @@ VCLは、理科実験を体験的に学べるWebアプリケーションです�
 
 そこで、実際の薬品を使わなくても、注ぐ、混ぜる、反応を見るという流れをWeb上で体験できるアプリとしてVCLを制作しました。
 
-![VCL overview](assets/vcl-cover.png)
+![VCLの概要画像](assets/vcl-cover.png)
 
-## Overview
+## 概要
 
 - 対象: 小学校高学年から中学生
 - 目的: 化学を丸暗記ではなく、体験しながら理解できるようにする
@@ -17,15 +17,15 @@ VCLは、理科実験を体験的に学べるWebアプリケーションです�
 - 成果: 学内コンテスト金賞
 - 補足: チーム開発のため、ソースコード本体は非公開です
 
-## Tech Stack
+## 使用技術
 
-- Frontend: JavaScript, Three.js
-- Backend: Node.js
-- Realtime: Socket.IO
-- Device Input: Joy-Con
-- Storage: LocalStorage, Supabaseを使った進捗保存設計
+- フロントエンド: JavaScript, Three.js
+- バックエンド: Node.js
+- リアルタイム通信: Socket.IO
+- 外部デバイス入力: Joy-Con
+- 保存設計: LocalStorage, Supabaseを使った進捗保存設計
 
-## My Role
+## 担当範囲
 
 - 4人チームのリーダー
 - 仕様整理
@@ -37,7 +37,7 @@ VCLは、理科実験を体験的に学べるWebアプリケーションです�
 - 実験定義を `quests.js` に集約する設計方針の整理
 - 発表時に伝わる見せ方の調整
 
-## Why Joy-Con
+## Joy-Conを選んだ理由
 
 最初からJoy-Conに決めていたわけではありません。
 
@@ -45,24 +45,24 @@ VCLは、理科実験を体験的に学べるWebアプリケーションです�
 
 最終的に、傾ける、振るといった操作を比較的安定して取得しやすく、実験器具を扱っている感覚も出しやすいJoy-Conを採用しました。
 
-## Screenshots
+## 画面イメージ
 
-![VCL experiment experience UI](assets/vcl-experience-ui.png)
+![VCLの実験体験画面](assets/vcl-experience-ui.png)
 
-![VCL experiment library](assets/vcl-experiment-library.png)
+![VCLの実験一覧画面](assets/vcl-experiment-library.png)
 
-## Architecture
+## 構成
 
 ```mermaid
 flowchart LR
   A[Joy-Con] --> B[Node.js]
   B --> C[Socket.IO]
-  C --> D[Browser]
-  D --> E[Three.js Scene]
-  E --> F[Reaction Effects]
+  C --> D[ブラウザ]
+  D --> E[Three.jsの3Dシーン]
+  E --> F[反応演出]
 ```
 
-## User Flow
+## 利用の流れ
 
 ```mermaid
 flowchart TD
@@ -74,7 +74,7 @@ flowchart TD
   F --> G[解説を表示する]
 ```
 
-## What I Focused On
+## 工夫した点
 
 ### 入力方式を複数検証したこと
 
@@ -88,13 +88,13 @@ flowchart TD
 
 リーダーとして、技術選定や仕様の理由をチーム内で共有し、メンバーが同じ方向を向いて進められるように意識しました。実装だけでなく、なぜその方式にするのかを言語化することを大切にしました。
 
-## What I Learned
+## 学んだこと
 
 技術選定は「新しさ」だけではなく、目的、安定性、チームの実装可能性から考える必要があると学びました。
 
 また、ユーザーが体験として理解できるものを作るには、機能を並べるだけでは不十分です。操作の気持ちよさや、見た瞬間に何が起きているか分かる表現まで考える必要があると感じました。
 
-## Future Improvements
+## 今後の改善
 
 - フリーモードの反応判定
 - Joy-Conの割り当て選択
@@ -102,6 +102,6 @@ flowchart TD
 - 実験数の追加
 - 先生向けの進捗管理画面
 
-## Note
+## 補足
 
-このリポジトリは、チーム開発で制作したVCLの公開可能な範囲をまとめたケーススタディです。ソースコード本体はチーム開発のため非公開とし、背景、担当範囲、設計判断、学びを中心に記録しています。
+このリポジトリは、チーム開発で制作したVCLの公開可能な範囲をまとめた制作事例です。ソースコード本体はチーム開発のため非公開とし、背景、担当範囲、設計判断、学びを中心に記録しています。
